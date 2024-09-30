@@ -9,10 +9,10 @@ import SwiftUI
 
 struct SettingsView: View {
     @Environment(SettingsView.ViewModel.self) var settingsViewModel
-
+    
     var body: some View {
         @Bindable var settingsViewModel = settingsViewModel
-
+        
         UltramanNavigationSplitView(sidebarWidth: 210) {
             SettingsSidebarView()
         } detail: {
@@ -30,8 +30,6 @@ struct SettingsView: View {
                     DownloadManagerView()
                 case .mlxCommunity:
                     MLXCommunityView()
-                case .about:
-                    AboutView()
                 }
             }
         }
@@ -39,6 +37,7 @@ struct SettingsView: View {
         .foregroundColor(.white)
     }
 }
+
 
 extension SettingsView {
     @Observable

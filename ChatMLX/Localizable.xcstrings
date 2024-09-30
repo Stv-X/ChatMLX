@@ -73,6 +73,34 @@
         }
       }
     },
+    "About ChatMLX" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ChatMLXについて"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ChatMLX에 관하여"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "关于 ChatMLX"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "關於 ChatMLX"
+          }
+        }
+      }
+    },
     "Are you sure you want to delete '%@'?" : {
       "localizations" : {
         "ja" : {
@@ -789,9 +817,6 @@
           }
         }
       }
-    },
-    "GitHub" : {
-      "shouldTranslate" : false
     },
     "GPU Cache Limit" : {
       "localizations" : {

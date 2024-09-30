@@ -9,8 +9,6 @@ import Luminare
 import SwiftUI
 
 struct AboutView: View {
-    @State private var isCheckingUpdate = false
-
     var body: some View {
         VStack(spacing: 30) {
             Image("AppLogo")
@@ -30,25 +28,16 @@ struct AboutView: View {
             .font(.subheadline)
             .foregroundColor(.white)
 
-            Link("GitHub", destination: URL(string: "https://github.com/maiqingqiang/ChatMLX")!)
-                .font(.headline)
-                .foregroundColor(.blue.opacity(0.8))
-
             Spacer()
             LuminareSection {
-                Button(action: {
-                    isCheckingUpdate = true
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                        isCheckingUpdate = false
-                    }
-
-                    NSWorkspace.shared.open(URL(string: "https://github.com/maiqingqiang/ChatMLX")!)
-                }) {
-                    Text(isCheckingUpdate ? "Checking..." : "Check for updates")
+                Link(destination: URL(string: "https://github.com/maiqingqiang/ChatMLX")!) {
+                    Image("github-logo")
+                        .resizable()
+                        .scaledToFit()
+                        .padding(6)
                 }
                 .frame(height: 30)
                 .buttonStyle(LuminareButtonStyle())
-                .disabled(isCheckingUpdate)
             }
         }
         .padding()

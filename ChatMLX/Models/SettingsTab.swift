@@ -19,7 +19,6 @@ struct SettingsTab: Identifiable, Equatable {
         case models = "Models"
         case mlxCommunity = "MLX Community"
         case downloadManager = "Download Manager"
-        case about = "About"
     }
 
     let id: ID
